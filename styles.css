@@ -1,0 +1,7 @@
+.pantalla_bienvenida{
+    display: block;
+}
+
+.pantalla_juego{
+    display: none;
+}

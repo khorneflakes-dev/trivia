@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia Game</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    #game, #results {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="start">
+    <label for="username">Ingresa tu nombre:</label>
+    <input type="text" id="username">
+    <button onclick="startGame()">Jugar</button>
+  </div>
+
+  <div id="game">
+    <h2>Pregunta de Trivia</h2>
+    <p id="question"></p>
+    <label for="answer">Tu respuesta:</label>
+    <input type="text" id="answer">
+    <button onclick="checkAnswer()">Revisar Pregunta</button>
+  </div>
+
+  <div id="results">
+    <!-- <h2>Resultados</h2> -->
+    <p id="resultMessage"></p>
+    <button onclick="playAgain()">Volver a Jugar</button>
+  </div>
+
+  <script>
+    let username;
+    let currentQuestion = 0;
+    let questions = [
+      { question: "¿Pregunta 1?", answer: "Respuesta 1" },
+      { question: "¿Pregunta 2?", answer: "Respuesta 2" },
+      // Agrega más preguntas según sea necesario
+    ];
+
+    function startGame() {
+      username = document.getElementById("username").value;
+
+      if (username.trim() !== "") {
+        document.getElementById("start").style.display = "none";
+        document.getElementById("game").style.display = "block";
+
+        showQuestion();
+      } else {
+        alert("Por favor, ingresa tu nombre.");
+      }
+    }
+
+    function showQuestion() {
+      if (currentQuestion < questions.length) {
+        document.getElementById("question").textContent = questions[currentQuestion].question;
+        document.getElementById("answer").value = "";
+      } else {
+        endGame();
+      }
+    }
+
+    function checkAnswer() {
+      let userAnswer = document.getElementById("answer").value.toLowerCase();
+      let correctAnswer = questions[currentQuestion].answer.toLowerCase();
+
+      if (userAnswer === correctAnswer) {
+        alert("¡Correcto!");
+      } else {
+        alert("Incorrecto. La respuesta correcta es: " + correctAnswer);
+      }
+
+      currentQuestion++;
+      showQuestion();
+    }
+
+    function endGame() {
+      document.getElementById("game").style.display = "none";
+      document.getElementById("results").style.display = "block";
+
+      let resultMessage = document.getElementById("resultMessage");
+      resultMessage.textContent = `¡${username}, has completado la trivia!`;
+    }
+
+    function playAgain() {
+      currentQuestion = 0;
+      document.getElementById("results").style.display = "none";
+      document.getElementById("start").style.display = "block";
+      document.getElementById("username").value = "";
+    }
+  </script>
+
+</body>
+</html>

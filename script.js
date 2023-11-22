@@ -1,25 +1,18 @@
-function revisarRespuestas() {
-    // console.log('boton revisarRespuesta funciona')
+function saludarJugador(){
 
-    // defino mi variable y capturo el evento de mis input radio
-    let respuesta = document.querySelector('input[name="q1"]:checked');
-    
-    const respuesta_owo = document.getElementById('respuesta');
-    
-    // const respuesta_owo1 = document.getElementById('respuesta1');
-    // const respuesta_owo2 = document.getElementById('respuesta2');
+    // caputra el valor del nombre del jugador del input text
+    let jugador = document.getElementById('nombre_jugador').value;
 
-    if (!respuesta){
-        respuesta_owo.innerHTML = 'Elije una opcion de la pregunta 1'
+    // capturamos el id del parrafo donde renderizaremos el saludo
+    let saludo_p = document.getElementById('saludo');
+
+    // si el usuario no dio ningun nombre se dispara una alerta
+    if (!jugador) {
+        alert('ingresa tu nombre para jugar!')
     }
-
-    else if (respuesta.value == 'negro') {
-        respuesta_owo.innerHTML = 'Respuesta 1 correcta'
-        // console.log('respuesta correcta')
-    } else {
-        respuesta_owo.innerHTML = 'Respuesta 1 incorrecta'
-        // console.log('respuesta incorrecta')
+    else if (jugador) {
+        saludo_p.innerHTML = `Saludos ${jugador}`
+        document.getElementById("pantalla1").style.display = "none"
+        document.getElementById("pantalla2").style.display = "block"
     }
-
-
 }

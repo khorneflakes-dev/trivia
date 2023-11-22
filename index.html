@@ -8,34 +8,24 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <h1>Trivia</h1>
-    <h4>Pregunta 1: De que color son las pantallas inteligentes apagadas?</h4>
+    <h2>Juego Trivia</h2>
 
-    <!-- input para capturar texto y para mostrar la indicacion usar placeholder -->
-    <!-- <input type="text" placeholder="ingresa tu nombre"> -->
+    <!-- pantalla bienvenida -->
+    <div id="pantalla1" class="pantalla_bienvenida">
+        <input type="text" placeholder="Ingresa tu nombre jugador:" id="nombre_jugador">
+        <button onclick="saludarJugador()">Comezar a jugar!</button>
+    </div>
 
-    <!-- ATAJOS DE TECLADO -->
-
-    <!-- para comentar Ctrl + K + C -->
-    <!-- para quitar comentar Ctrl + K + U -->
-    <!-- checked para mostrar esa opcion por defecto -->
-    <!-- para duplicar lineas de codigo, usar Ctrl + Shift + Flecha hacia abajo o arriba -->
-    <input type="radio" name="q1" value="negro">Negro
-    <input type="radio" name="q1" value="blanco">Blanco
-    <input type="radio" name="q1" value="amarillo">Amarillo
-
-    <!-- llenar con la segunda pregunta -->
-
-
-
-    <!-- trigger o disparador -->
-    <button type="button" onclick="revisarRespuestas()">Enviar y revisar respuestas</button>
-    <h4>Tus respuestas:</h4>
-
-    <p id="respuesta"></p>
-    
-    <!-- ejemplo -->
-    <!-- <p id="respuesta1"></p>
-    <p id="respuesta2"></p> -->
+    <!-- pantalla juego -->
+    <div id="pantalla2" class="pantalla_juego">
+        <p>Pantalla Juego</p>
+        <p id="saludo"></p>
+        <p>preguntas</p>
+        <p>pregunta 1</p>
+        <p>pregunta 2</p>
+        <p>pregunta 3</p>
+        <button>Revisar Respuestas</button>
+        <button>Volver a Jugar</button>
+    </div>
 </body>
 </html>
