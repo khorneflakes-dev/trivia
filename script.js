@@ -39,7 +39,12 @@ function revisarRespuesta(){
             console.log(`tu puntaje hasta la pregunta ${indice + 1} es ${puntaje}`)
         }
     }
+
+    // aqui ejecuto el ciclo for en respuestas_array para comparar las respuestas del usuario con las respuestas correctas
     respuestas_array.forEach(evaluar)
+
+    // aqui ya tengo el nuevo valor del puntaje, dependiendo de cuantas correctas tenga el usuario
+    console.log(puntaje)
 }
 
 // if (respuestas_comida[0] == respuestas_usuario[0]) {
