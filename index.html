@@ -20,11 +20,45 @@
     <div id="pantalla2" class="pantalla_juego">
         <p>Pantalla Juego</p>
         <p id="saludo"></p>
-        <p>preguntas</p>
-        <p>pregunta 1</p>
-        <p>pregunta 2</p>
-        <p>pregunta 3</p>
-        <button>Revisar Respuestas</button>
+
+        <button>Comida</button>
+        <button>Cerveza</button>
+        <div id="pantalla_comida">
+
+            <div id="preguntas_comida">
+
+                <h4>Trivia Comida</h4>
+                
+                <p>¿Cuál de los siguientes platos es típico de la cocina italiana?</p>
+                <input type="radio" name="p_comida1" value="sushi">Sushi
+                <input type="radio" name="p_comida1" value="paella">Paella
+                <input type="radio" name="p_comida1" value="lasagna">Lasagna
+                
+                <p>¿Cuál de las siguientes opciones es un postre francés famoso?</p>
+                <input type="radio" name="p_comida2" value="tiramisu">Tiramisú
+                <input type="radio" name="p_comida2" value="baklava">Baklava
+                <input type="radio" name="p_comida2" value="creme">Crème brûlée
+                
+                <p>¿Qué ingrediente principal se utiliza en la preparación de guacamole, un plato tradicional mexicano?</p>
+                <input type="radio" name="p_comida3" value="mango">Mango
+                <input type="radio" name="p_comida3" value="aguacate">Aguacate
+                <input type="radio" name="p_comida3" value="platano">Plátano
+                
+                <button onclick="revisarRespuesta()">Revisar Respuestas</button>
+
+            </div>
+        </div>
+        
+        <!-- <div id="pantalla_cerveza">
+            <h4>Trivia Cerveza</h4>
+            <p>pregunta 1</p>
+            <p>pregunta 2</p>
+            <p>pregunta 3</p>
+            <button>Revisar Respuestas</button>
+        </div> -->
+
+
+        <p>tienes 20 puntos</p>
         <button>Volver a Jugar</button>
     </div>
 </body>

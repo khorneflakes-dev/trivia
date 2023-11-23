@@ -16,3 +16,50 @@ function saludarJugador(){
         document.getElementById("pantalla2").style.display = "block"
     }
 }
+
+const respuestas_comida  = ['lasagna',   'creme',  'aguacate']
+// este es solo un ejemplo, el array real es respuestas
+const respuestas_usuario = ['lasagna','pescado','limon']
+
+function revisarRespuesta(){
+    // recoges los elementos dentro del div con id preguntas_comida que sean inputradio y esten tickeadas
+    // y los estoy metiendo en un array
+    let respuestas_array = document.querySelectorAll('#preguntas_comida input[type="radio"]:checked');
+    
+    // ejecutamos un ciclo for each para iterar sobre cada respuesta
+
+    let puntaje = 0
+
+    function evaluar(respuesta, indice) {
+
+        if (respuestas_comida[indice] == respuestas_array[indice].value){
+            puntaje = puntaje + 5
+            console.log(`tu puntaje hasta la pregunta ${indice + 1} es ${puntaje}`)
+        } else {
+            console.log(`tu puntaje hasta la pregunta ${indice + 1} es ${puntaje}`)
+        }
+    }
+    respuestas_array.forEach(evaluar)
+}
+
+// if (respuestas_comida[0] == respuestas_usuario[0]) {
+//     console.log('correcto')
+// } else{
+//     console.log('incorrecto')
+// }
+
+// para obtener un elemento de un array podemos usar indices
+// respuestas_comida[0] = 'lasagna'
+
+// elementos de un array para un ciclo for
+// (element, index, array)
+// los mas usados son los 2 primeros, element e index
+
+// function imprimir_comida(comida, posicion){
+//     console.log(`tu comida es: ${comida}, indice: ${posicion}`)
+// }
+
+// // paso1, llamamos al array
+// // paso2, llamamos al metodo forEach
+// // paso3, llamamos a mi funcion personalizada
+// respuestas_comida.forEach(imprimir_comida)
