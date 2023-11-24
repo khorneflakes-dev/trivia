@@ -21,6 +21,47 @@ const respuestas_comida  = ['lasagna',   'creme',  'aguacate']
 // este es solo un ejemplo, el array real es respuestas
 const respuestas_usuario = ['lasagna','pescado','limon']
 
+// console.log(respuestas_comida)
+// respuestas_comida[0] = 'pasta'
+// console.log(respuestas_comida)
+
+// const mi_comida = respuestas_comida[2]
+// console.log(mi_comida)
+
+// temas pendientes:
+// arrowfunctions
+// Map
+// ciclos for
+
+// Funciones Flecha o ArrowFunction
+
+// funcion normal sin parametros
+function imprimirSaludo () {
+    console.log('hola normal')
+}
+
+// arrow function sin parametros
+const imprimirSaludoArrow = () => {
+    console.log('hola arrow')
+}
+
+// funcion normal con parametros
+function multiply (num1, num2) {
+    resultado_multiplicacion = num1 * num2
+    // console.log('multiplicacion realizada')
+    return resultado_multiplicacion
+  }
+
+// arrow function con parametros
+const multiplyArrow = (num1, num2) => {
+    return num1 * num2
+  }
+
+
+imprimirSaludo()
+imprimirSaludoArrow()
+
+
 function revisarRespuesta(){
     // recoges los elementos dentro del div con id preguntas_comida que sean inputradio y esten tickeadas
     // y los estoy metiendo en un array
